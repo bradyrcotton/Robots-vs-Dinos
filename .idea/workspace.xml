@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="958067a8-8778-4d97-8b36-2a73f87feea6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/battlefield.py" beforeDir="false" afterPath="$PROJECT_DIR$/battlefield.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fleet.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/herd.py" beforeDir="false" afterPath="$PROJECT_DIR$/herd.py" afterDir="false" />
-    </list>
+    <list default="true" id="958067a8-8778-4d97-8b36-2a73f87feea6" name="Default Changelist" comment="put the dinos into list herd within the class Herd" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +55,14 @@
       <option name="presentableId" value="Default" />
       <updated>1616094255886</updated>
     </task>
+    <task id="LOCAL-00001" summary="put the dinos into list herd within the class Herd">
+      <created>1616178264766</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616178264767</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,12 +76,16 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="put the dinos into list herd within the class Herd" />
+    <option name="LAST_COMMIT_MESSAGE" value="put the dinos into list herd within the class Herd" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/battlefield.py</url>
-          <line>7</line>
+          <line>10</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
