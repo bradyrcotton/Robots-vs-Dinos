@@ -1,9 +1,9 @@
 class Dino:
     def __init__(self, dino, power, attack):
-        self.dinos_type = dino
-        self.dinos_health = 100
-        self.dinos_power = power
-        self.dinos_attack = attack
+        self.type = dino
+        self.health = 100
+        self.power = power
+        self.attack = attack
 
     def dino_attack(self, robot):
         robot.robos_health -= self.dinos_attack
