@@ -4,7 +4,7 @@ class Robot:
         self.type = robot
         self.health = 100
         self.power = power
+        self.weapon = ""
         self.attack = attack
 
-    # def robot_attack(self, dino):
-    #     dino.dinos_health -= self.robos_attack
+
