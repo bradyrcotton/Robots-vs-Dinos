@@ -12,42 +12,50 @@ class Battlefield:
     def attack_sequence(self, attacker, defender):
         defender.health -= attacker.attack
         print(f"{attacker.type} attacks {defender.type}")
-        attacker.health -= defender.attack
-        print(f"{defender.type} attacks {attacker.type}")
+
 
     def run_game(self):
-
-        def get_random_number():
-            random_int = random_number(0, 2)
-            return random_int
-        i = get_random_number()
         j = 0
         k = 0
+        while j <= 3 and k <= 3:
+            i = get_random_number(0, 2)
+            while self.herd.herd[i].health <= 0:
+                i = get_random_number(0, 2)
 
-        while i < 3:
+            m = get_random_number(0, 2)
+            while self.fleet.fleet[m].health <= 0:
+                m = get_random_number(0, 2)
 
-            while self.herd.herd[i].health > 0 and self.fleet.fleet[i].health > 0:
-                self.attack_sequence(self.herd.herd[i], self.fleet.fleet[i])
-                if self.herd.herd[i].health > 0:
-                    print(f"{self.herd.herd[i].type}'s HP = {self.herd.herd[i].health}")
-                if self.fleet.fleet[i].health > 0:
-                    print(f"{self.fleet.fleet[i].type}'s HP = {self.fleet.fleet[i].health}")
+            n = get_random_number(1, 2)
+
+            if n == 1:
+                self.attack_sequence(self.herd.herd[i], self.fleet.fleet[m])
+            if n == 2:
+                self.attack_sequence(self.fleet.fleet[m], self.herd.herd[i])
+            if self.herd.herd[i].health > 0:
+                print(f"{self.herd.herd[i].type}'s HP = {self.herd.herd[i].health}")
+            if self.fleet.fleet[i].health > 0:
+                print(f"{self.fleet.fleet[m].type}'s HP = {self.fleet.fleet[m].health}")
 
             if self.herd.herd[i].health <= 0:
                 print(f"{self.herd.herd[i].type} is dead")
                 i += 1
                 j += 1
 
-            elif self.fleet.fleet[i].health <= 0:
-                print(f"{self.fleet.fleet[i].type} is dead")
+            elif self.fleet.fleet[m].health <= 0:
+                print(f"{self.fleet.fleet[m].type} is dead")
                 i += 1
                 k += 1
 
-        if i >= 3:
-            if j > k:
+            if j == 3:
                 print("The fleet of robots has destroyed the herd of dinosaurs")
-            else:
+            if k == 3:
                 print("The herd of dinosaurs has defeated the fleet of robots")
+
+
+def get_random_number(num_1, num_2):
+    random_int = random_number(num_1,num_2)
+    return random_int
 
 
 def random_number(min_value, max_value):
