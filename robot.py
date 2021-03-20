@@ -1,10 +1,10 @@
 class Robot:
 
-    def __init__(self, robot, power, attack):
+    def __init__(self, robot, power,weapon, attack):
         self.type = robot
         self.health = 100
         self.power = power
-        self.weapon = ""
+        self.weapon = weapon
         self.attack = attack
 
 
