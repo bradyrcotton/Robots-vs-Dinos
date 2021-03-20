@@ -3,16 +3,16 @@ from herd import Herd
 import random
 
 
+def attack_sequence(attacker, defender):
+    defender.health -= attacker.attack
+    print(f"{attacker.type} attacks {defender.type}")
+
+
 class Battlefield:
 
     def __init__(self):
         self.herd = Herd()
         self.fleet = Fleet()
-
-    def attack_sequence(self, attacker, defender):
-        defender.health -= attacker.attack
-        print(f"{attacker.type} attacks {defender.type}")
-
 
     def run_game(self):
         j = 0
@@ -29,9 +29,9 @@ class Battlefield:
             n = get_random_number(1, 2)
 
             if n == 1:
-                self.attack_sequence(self.herd.herd[i], self.fleet.fleet[m])
+                attack_sequence(self.herd.herd[i], self.fleet.fleet[m])
             if n == 2:
-                self.attack_sequence(self.fleet.fleet[m], self.herd.herd[i])
+                attack_sequence(self.fleet.fleet[m], self.herd.herd[i])
             if self.herd.herd[i].health > 0:
                 print(f"{self.herd.herd[i].type}'s HP = {self.herd.herd[i].health}")
             if self.fleet.fleet[i].health > 0:
